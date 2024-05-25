@@ -24,3 +24,13 @@
     background-color: #555;
   }
   
+  .movie-detail .button-container .favorite-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  

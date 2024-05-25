@@ -1,0 +1,22 @@
+.genre-filter {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .genre-filter label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: white; /* Ensure the label text is readable on a dark background */
+  }
+  
+  .genre-filter select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #000; /* Change background color to black */
+    color: white; /* Change text color to white */
+    cursor: pointer;
+    z-index: 1; /* Ensure the dropdown is above other elements */
+  }
+  

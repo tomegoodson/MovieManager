@@ -21,8 +21,26 @@ const MovieList = ({ filter, searchQuery, deleteMovie }) => {
     setSelectedMovie(movie);
   };
 
+  const handleKeyUp = (event, movie) => {
+    if (event.key === 'Enter') {
+      handleMovieClick(movie);
+    }
+  };
+
+  const handleKeyDown = (event, movie) => {
+    if (event.key === 'Enter') {
+      handleMovieClick(movie);
+    }
+  };
+
   const handleClose = () => {
     setSelectedMovie(null);
+  };
+
+  const handleModalKeyUp = (event) => {
+    if (event.key === 'Escape') {
+      handleClose();
+    }
   };
 
   const handleDelete = () => {
@@ -41,7 +59,15 @@ const MovieList = ({ filter, searchQuery, deleteMovie }) => {
       <h2>Movie List</h2>
       <div className="movie-grid">
         {filteredMovies.map(movie => (
-          <div key={movie.id} className="movie-card" onClick={() => handleMovieClick(movie)}>
+          <div
+            key={movie.id}
+            className="movie-card"
+            onClick={() => handleMovieClick(movie)}
+            onKeyUp={(event) => handleKeyUp(event, movie)}
+            onKeyDown={(event) => handleKeyDown(event, movie)}
+            tabIndex={0}
+            role="button"
+          >
             <img src={movie.posterUrl} alt={movie.title} />
             <h3>{movie.title}</h3>
           </div>
@@ -49,8 +75,13 @@ const MovieList = ({ filter, searchQuery, deleteMovie }) => {
       </div>
 
       {selectedMovie && (
-        <div className="movie-modal" onClick={handleClose}>
-          <div className="movie-modal-content" onClick={e => e.stopPropagation()}>
+        <div
+          className="movie-modal"
+          onKeyUp={handleModalKeyUp}
+        >
+          <div
+            className="movie-modal-content"
+          >
             <h2>{selectedMovie.title}</h2>
             <p><strong>Year:</strong> {selectedMovie.year}</p>
             <p><strong>Runtime:</strong> {selectedMovie.runtime} minutes</p>
@@ -58,7 +89,7 @@ const MovieList = ({ filter, searchQuery, deleteMovie }) => {
             <p><strong>Actors:</strong> {selectedMovie.actors}</p>
             <p><strong>Plot:</strong> {selectedMovie.plot}</p>
             <div className="button-container">
-              <button onClick={handleClose}>Close</button>
+              <button type="button" onClick={handleClose}>Close</button>
               <button type="button" onClick={handleDelete}>Delete</button>
             </div>
           </div>

@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #333;
+    background-color: black;
     color: white;
     padding: 10px 0;
   }
@@ -13,15 +13,28 @@
   }
   
   .navbar-logo {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .logo-image {
+    max-width: 150px; /* Adjust the width as needed */
+    height: auto;
   }
   
   .navbar-search {
     padding: 5px;
     border-radius: 5px;
     border: none;
+    flex: 2;
+    margin: 0 20px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
   }
   
   .navbar-links a {
