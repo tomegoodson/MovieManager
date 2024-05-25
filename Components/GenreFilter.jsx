@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const GenreFilter = ({ genres, onFilter }) => {
   return (
@@ -6,8 +6,8 @@ const GenreFilter = ({ genres, onFilter }) => {
       <label>Filter by Genre: </label>
       <select onChange={(e) => onFilter(e.target.value)}>
         <option value="">All</option>
-        {genres.map((genre, index) => (
-          <option key={index} value={genre}>{genre}</option>
+        {genres.map((genre) => (
+          <option key={genre} value={genre}>{genre}</option>
         ))}
       </select>
     </div>
