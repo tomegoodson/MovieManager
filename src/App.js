@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
-import {BrowserRouter as Router, Route, Switch } from 'react-router';
-import NavBar from './components/NavBar';
-import MovieList from './components/MovieList';
-import MovieDetail from './components/MovieDetail';
-import AddMovie from './components/AddMovie';
-import GenreFilter from './components/GenreFilter';
-import './app.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './NavBar';
+import MovieList from './MovieList';
+import MovieDetail from './MovieDetail';
+import AddMovie from './AddMovie';
+import GenreFilter from './GenreFilter';
+import './App.css';
 
 const App = () => {
   const [filter, setFilter] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [movies, setMovies] = useState([]);
-  
+
   const addMovie = (newMovie) => {
     setMovies([...movies, newMovie]);
   };
 
-  constdeleteMovie = (movieId) => {
+  const deleteMovie = (movieId) => {
     setMovies(movies.filter(movie => movie.id !== movieId));
   };
 
@@ -25,25 +26,20 @@ const App = () => {
     "Biography", "Action", "Film-Noir", "Romance", "Sci-Fi",
     "War", "Western", "Horror", "Musical", "Sport"
   ];
-  
+
   return (
     <Router>
       <div>
-        <Navbar />
+        <Navbar setSearchQuery={setSearchQuery} />
         <GenreFilter genres={genres} onFilter={setFilter} />
-        <Switch>
-          <Route exact path="/" component={() => <MoiveList filter={filter} />} />
-          <Route path="/movie/:id" component={() => <MovieDetail onDelete={deleteMovie} />} />
-          <Route path="/add-movie" component={() => <AddMovie onAdd={addMovie} />} />
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<MovieList filter={filter} searchQuery={searchQuery} deleteMovie={deleteMovie} />} />
+          <Route path="/movies/:id" element={<MovieDetail onDelete={deleteMovie} />} />
+          <Route path="/add-movie" element={<AddMovie onAdd={addMovie} />} />
+        </Routes>
       </div>
     </Router>
   );
 };
 
 export default App;
-
-
-
-
-

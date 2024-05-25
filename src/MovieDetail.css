@@ -1,0 +1,26 @@
+.movie-detail {
+    position: relative;
+  }
+  
+  .movie-detail .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .movie-detail .button-container button {
+    flex: 1;
+    margin: 0 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .movie-detail .button-container button:hover {
+    background-color: #555;
+  }
+  
