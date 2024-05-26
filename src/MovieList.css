@@ -38,7 +38,8 @@
   }
   
   .movie-card h3 {
-    padding: 10px;
+    padding: 2px;
+    font-size: 14px;
   }
   
   .movie-card:hover {

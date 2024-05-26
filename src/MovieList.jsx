@@ -56,7 +56,6 @@ const MovieList = ({ filter, searchQuery, deleteMovie }) => {
 
   return (
     <div className="container">
-      <h2>Movie List</h2>
       <div className="movie-grid">
         {filteredMovies.map(movie => (
           <div
