@@ -39,6 +39,7 @@
   
   .navbar-links a {
     color: white;
+    font: bold;
     text-decoration: none;
     margin: 0 10px;
   }
