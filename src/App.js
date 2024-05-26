@@ -6,7 +6,6 @@ import MovieDetail from './MovieDetail';
 import AddMovie from './AddMovie';
 import GenreFilter from './GenreFilter';
 import Favorites from './Favorites';
-import { useTheme } from './ThemeContext';
 import './App.css';
 
 const App = () => {
@@ -14,17 +13,12 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [movies, setMovies] = useState([]);
   const [favorites, setFavorites] = useState([]);
-  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     fetch('http://localhost:3001/movies')
       .then(response => response.json())
       .then(data => setMovies(data));
   }, []);
-
-  useEffect(() => {
-    document.body.className = isDarkMode ? 'dark' : 'light';
-  }, [isDarkMode]);
 
   const addMovie = (newMovie) => {
     setMovies([...movies, newMovie]);
@@ -52,7 +46,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className={`container ${isDarkMode ? 'dark' : 'light'}`}>
+      <div className="container">
         <Navbar setSearchQuery={setSearchQuery} />
         <GenreFilter genres={genres} onFilter={setFilter} />
         <Routes>
