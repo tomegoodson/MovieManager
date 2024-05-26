@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './NavBar';
 import MovieList from './MovieList';
 import MovieDetail from './MovieDetail';
@@ -8,7 +8,7 @@ import GenreFilter from './GenreFilter';
 import Favorites from './Favorites';
 import './App.css';
 
-const App = () => {
+const AppContent = () => {
   const [filter, setFilter] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [movies, setMovies] = useState([]);
@@ -44,20 +44,26 @@ const App = () => {
     "War", "Western", "Horror", "Musical", "Sport"
   ];
 
+  const location = useLocation();
+
   return (
-    <Router>
-      <div className="container">
-        <Navbar setSearchQuery={setSearchQuery} />
-        <GenreFilter genres={genres} onFilter={setFilter} />
-        <Routes>
-          <Route exact path="/" element={<MovieList filter={filter} searchQuery={searchQuery} deleteMovie={deleteMovie} />} />
-          <Route path="/movies/:id" element={<MovieDetail onDelete={deleteMovie} toggleFavorite={toggleFavorite} favorites={favorites} />} />
-          <Route path="/add-movie" element={<AddMovie onAdd={addMovie} />} />
-          <Route path="/favorites" element={<Favorites favorites={favorites} movies={movies} />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="container">
+      <Navbar setSearchQuery={setSearchQuery} />
+      {location.pathname === '/' && <GenreFilter genres={genres} onFilter={setFilter} />}
+      <Routes>
+        <Route exact path="/" element={<MovieList filter={filter} searchQuery={searchQuery} deleteMovie={deleteMovie} />} />
+        <Route path="/movies/:id" element={<MovieDetail onDelete={deleteMovie} toggleFavorite={toggleFavorite} favorites={favorites} />} />
+        <Route path="/add-movie" element={<AddMovie onAdd={addMovie} />} />
+        <Route path="/favorites" element={<Favorites favorites={favorites} movies={movies} />} />
+      </Routes>
+    </div>
   );
 };
+
+const App = () => (
+  <Router>
+    <AppContent />
+  </Router>
+);
 
 export default App;
