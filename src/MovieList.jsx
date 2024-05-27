@@ -1,16 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './MovieList.css';
 
-const MovieList = ({ filter, searchQuery, deleteMovie }) => {
-  const [movies, setMovies] = useState([]);
+const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
   const [selectedMovie, setSelectedMovie] = useState(null);
-
-  useEffect(() => {
-    fetch('http://localhost:3001/movies')
-      .then(response => response.json())
-      .then(data => setMovies(data))
-      .catch(error => console.error('Fetch error:', error));
-  }, []);
 
   const filteredMovies = movies.filter(movie => {
     return (!filter || movie.genres.includes(filter)) &&

@@ -33,35 +33,35 @@ const AddMovie = ({ onAdd }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Title</label>
+        <label>Title:</label>
         <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
       </div>
       <div>
-        <label>Year</label>
+        <label>Year:</label>
         <input type="text" value={year} onChange={(e) => setYear(e.target.value)} />
       </div>
       <div>
-        <label>Runtime</label>
+        <label>Runtime:</label>
         <input type="text" value={runtime} onChange={(e) => setRuntime(e.target.value)} />
       </div>
       <div>
-        <label>Genre</label>
+        <label>Genre:</label>
         <input type="text" value={genre} onChange={(e) => setGenre(e.target.value)} />
       </div>
       <div>
-        <label>Director</label>
+        <label>Director:</label>
         <input type="text" value={director} onChange={(e) => setDirector(e.target.value)} />
       </div>
       <div>
-        <label>Actors</label>
+        <label>Actors:</label>
         <input type="text" value={actors} onChange={(e) => setActors(e.target.value)} />
       </div>
       <div>
-        <label>Plot</label>
+        <label>Plot:</label>
         <textarea value={plot} onChange={(e) => setPlot(e.target.value)} />
       </div>
       <div>
-        <label>Poster URL</label>
+        <label>Poster URL:</label>
         <input type="text" value={posterUrl} onChange={(e) => setPosterUrl(e.target.value)} />
       </div>
       <button type="submit">Add Movie</button>
