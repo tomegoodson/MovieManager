@@ -10,12 +10,13 @@ const AddMovie = ({ onAdd }) => {
   const [director, setDirector] = useState('');
   const [actors, setActors] = useState('');
   const [plot, setPlot] = useState('');
+  const [posterUrl, setPosterUrl] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newMovie = { title, year, runtime, genre, director, actors, plot };
+    const newMovie = { title, year, runtime, genre, director, actors, plot, posterUrl };
 
     fetch('http://localhost:3001/movies', {
       method: 'POST',
@@ -58,6 +59,10 @@ const AddMovie = ({ onAdd }) => {
       <div>
         <label>Plot</label>
         <textarea value={plot} onChange={(e) => setPlot(e.target.value)} />
+      </div>
+      <div>
+        <label>Poster URL</label>
+        <input type="text" value={posterUrl} onChange={(e) => setPosterUrl(e.target.value)} />
       </div>
       <button type="submit">Add Movie</button>
     </form>

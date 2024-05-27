@@ -29,7 +29,7 @@
 
 .navbar-links {
   display: flex;
-  gap: 10px; /* Add spacing between links */
+  gap: 14px; /* Add spacing between links */
 }
 
 .navbar-links a {
