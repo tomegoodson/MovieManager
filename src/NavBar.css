@@ -1,7 +1,7 @@
 .navbar {
   background-color: black;
   color: white;
-  padding: 10px 0; /* Adjust padding to control header height */
+  padding: 10px 0; 
 }
 
 .navbar-container {
@@ -10,12 +10,12 @@
   align-items: center;
   width: 90%;
   margin: auto;
-  height: 60px; /* Set a fixed height for the navbar */
+  height: 60px; 
 }
 
 .navbar-logo {
-  height: 220px; /* Increase the height of the logo */
-  width: 350px; /* Maintain the aspect ratio */
+  height: 220px; 
+  width: 350px; 
 }
 
 .navbar-search {
@@ -23,13 +23,13 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   max-width: 300px;
-  flex-grow: 1; /* Allow the search bar to grow */
-  margin: 0 20px; /* Add some margin to center it better */
+  flex-grow: 1; 
+  margin: 0 20px; 
 }
 
 .navbar-links {
   display: flex;
-  gap: 14px; /* Add spacing between links */
+  gap: 14px; 
 }
 
 .navbar-links a {
