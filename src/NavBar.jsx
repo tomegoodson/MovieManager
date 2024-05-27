@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
-import logo from './2.png'; // Adjust the path to the image as necessary
+import logo from './2.png'; // Ensure this path is correct
 
 const Navbar = ({ setSearchQuery }) => {
   const handleSearch = (e) => {
@@ -11,13 +11,11 @@ const Navbar = ({ setSearchQuery }) => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          <img src={logo} alt="Logo" className="logo-image" />
-        </Link>
+        <img src={logo} alt="Logo" className="navbar-logo" />
         <input
           type="text"
           className="navbar-search"
-          placeholder="Search movies..."
+          placeholder="Search..."
           onChange={handleSearch}
         />
         <div className="navbar-links">

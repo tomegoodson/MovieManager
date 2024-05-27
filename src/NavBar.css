@@ -1,50 +1,42 @@
 .navbar {
-    background-color: black;
-    color: white;
-    padding: 10px 0;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: auto;
-  }
-  
-  .navbar-logo {
-    display: flex;
-    align-items: center;
-    flex: 1;
-  }
-  
-  .logo-image {
-    max-width: 150px; /* Adjust the width as needed */
-    height: auto;
-  }
-  
-  .navbar-search {
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-    flex: 2;
-    margin: 0 20px;
-  }
-  
-  .navbar-links {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-  }
-  
-  .navbar-links a {
-    color: white;
-    font: bold;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  
-  .navbar-links a:hover {
-    text-decoration: underline;
-  }
-  
+  background-color: black;
+  color: white;
+  padding: 10px 0; /* Adjust padding to control header height */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  height: 60px; /* Set a fixed height for the navbar */
+}
+
+.navbar-logo {
+  height: 220px; /* Increase the height of the logo */
+  width: 350px; /* Maintain the aspect ratio */
+}
+
+.navbar-search {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  max-width: 300px;
+  flex-grow: 1; /* Allow the search bar to grow */
+  margin: 0 20px; /* Add some margin to center it better */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 10px; /* Add spacing between links */
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
