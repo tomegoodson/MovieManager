@@ -35,6 +35,7 @@
 .navbar-links a {
   color: white;
   text-decoration: none;
+  font-size: 18px;
 }
 
 .navbar-links a:hover {
