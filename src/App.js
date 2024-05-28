@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './NavBar';
-import MovieList from './MovieList';
-import MovieDetail from './MovieDetail';
-import AddMovie from './AddMovie';
-import GenreFilter from './GenreFilter';
-import Favorites from './Favorites';
+import Navbar from './components/NavBar';
+import MovieList from './components/MovieList';
+import MovieDetail from './components/MovieDetail';
+import AddMovie from './components/AddMovie';
+import GenreFilter from './components/GenreFilter';
+import Favorites from './components/Favorites';
 import './App.css';
 
 const App = () => {
