@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
-import logo from './2.png'; // Ensure this path is correct
+import logo from './2.png'; 
 
 const Navbar = ({ setSearchQuery }) => {
   const handleSearch = (e) => {

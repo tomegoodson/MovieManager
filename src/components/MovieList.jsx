@@ -2,16 +2,14 @@ import React, { useState } from 'react';
 import './MovieList.css';
 
 const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
-  // State to track the selected movie
+  // State  track the selected movie
   const [selectedMovie, setSelectedMovie] = useState(null);
 
-  // Filter movies based on genre and search query
   const filteredMovies = movies.filter(movie => {
     return (!filter || movie.genres.includes(filter)) &&
            (!searchQuery || movie.title.toLowerCase().includes(searchQuery.toLowerCase()));
   });
 
-  // handle movie click and set the selected movie
   const handleMovieClick = (movie) => {
     setSelectedMovie(movie);
   };
@@ -21,14 +19,14 @@ const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
     setSelectedMovie(null);
   };
 
-  // Function to handle movie deletion
+  //  movie deletion
   const handleDelete = () => {
     fetch(`http://localhost:3001/movies/${selectedMovie.id}`, {
       method: 'DELETE'
     })
     .then(() => {
       deleteMovie(selectedMovie.id); // Call the deleteMovie prop to update parent state
-      handleClose(); // Close the modal after deletion
+      handleClose(); 
     })
     .catch(error => console.error('Delete error:', error));
   };

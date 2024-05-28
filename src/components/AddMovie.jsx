@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './AddMovie.css';
 
 const AddMovie = ({ onAdd }) => {
-  // State variables for each form input
   const [title, setTitle] = useState('');
   const [year, setYear] = useState('');
   const [runtime, setRuntime] = useState('');
@@ -12,10 +11,10 @@ const AddMovie = ({ onAdd }) => {
   const [actors, setActors] = useState('');
   const [plot, setPlot] = useState('');
   const [posterUrl, setPosterUrl] = useState('');
-  const navigate = useNavigate(); // Initialize navigate function for programmatic navigation
+  const navigate = useNavigate(); //  navigate    
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); // Prevent default submission
 
     const newMovie = { title, year, runtime, genre, director, actors, plot, posterUrl };
 
