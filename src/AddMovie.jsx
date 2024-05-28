@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './AddMovie.css';
 
 const AddMovie = ({ onAdd }) => {
+  // State variables for each form input
   const [title, setTitle] = useState('');
   const [year, setYear] = useState('');
   const [runtime, setRuntime] = useState('');
@@ -11,13 +12,14 @@ const AddMovie = ({ onAdd }) => {
   const [actors, setActors] = useState('');
   const [plot, setPlot] = useState('');
   const [posterUrl, setPosterUrl] = useState('');
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Initialize navigate function for programmatic navigation
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission behavior
 
     const newMovie = { title, year, runtime, genre, director, actors, plot, posterUrl };
 
+    // post request to add the new movie to the backend server
     fetch('http://localhost:3001/movies', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -25,8 +27,8 @@ const AddMovie = ({ onAdd }) => {
     })
       .then(response => response.json())
       .then(data => {
-        onAdd(data);
-        navigate('/');
+        onAdd(data); // onAdd function passed via props to update the parent component state
+        navigate('/'); // navigate back to the home page after submission
       });
   };
 

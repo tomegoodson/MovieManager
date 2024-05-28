@@ -3,9 +3,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import './MovieDetail.css';
 
 const MovieDetail = ({ deleteMovie, favorites, toggleFavorite }) => {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const [movie, setMovie] = useState(null);
+  const { id } = useParams(); // Get the movie id from the URL parameters
+  const navigate = useNavigate(); // Hook for programmatic navigation
+  const [movie, setMovie] = useState(null); 
 
   useEffect(() => {
     fetch(`http://localhost:3001/movies/${id}`)
@@ -13,22 +13,24 @@ const MovieDetail = ({ deleteMovie, favorites, toggleFavorite }) => {
       .then(data => setMovie(data));
   }, [id]);
 
+  // Deelete
   const handleDelete = () => {
     fetch(`http://localhost:3001/movies/${id}`, {
       method: 'DELETE'
     })
       .then(() => {
-        deleteMovie(id);
-        navigate('/');
+        deleteMovie(id); // Call the deleteMovie function passed as a prop
+        navigate('/'); // Navigate back to the home page
       })
       .catch(error => console.error('Delete error:', error));
   };
 
+  // Handle toggling the favorite status of the movie
   const handleToggleFavorite = () => {
     toggleFavorite(movie.id);
   };
 
-  const isFavorited = favorites.includes(movie?.id);
+  const isFavorited = favorites.includes(movie?.id); // Check if the movie is in the favorites list
 
   return (
     movie ? (

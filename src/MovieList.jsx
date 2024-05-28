@@ -2,46 +2,33 @@ import React, { useState } from 'react';
 import './MovieList.css';
 
 const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
+  // State to track the selected movie
   const [selectedMovie, setSelectedMovie] = useState(null);
 
+  // Filter movies based on genre and search query
   const filteredMovies = movies.filter(movie => {
     return (!filter || movie.genres.includes(filter)) &&
            (!searchQuery || movie.title.toLowerCase().includes(searchQuery.toLowerCase()));
   });
 
+  // handle movie click and set the selected movie
   const handleMovieClick = (movie) => {
     setSelectedMovie(movie);
   };
 
-  const handleKeyUp = (event, movie) => {
-    if (event.key === 'Enter') {
-      handleMovieClick(movie);
-    }
-  };
-
-  const handleKeyDown = (event, movie) => {
-    if (event.key === 'Enter') {
-      handleMovieClick(movie);
-    }
-  };
-
+  // close the movie modal
   const handleClose = () => {
     setSelectedMovie(null);
   };
 
-  const handleModalKeyUp = (event) => {
-    if (event.key === 'Escape') {
-      handleClose();
-    }
-  };
-
+  // Function to handle movie deletion
   const handleDelete = () => {
     fetch(`http://localhost:3001/movies/${selectedMovie.id}`, {
       method: 'DELETE'
     })
     .then(() => {
-      deleteMovie(selectedMovie.id);
-      handleClose();
+      deleteMovie(selectedMovie.id); // Call the deleteMovie prop to update parent state
+      handleClose(); // Close the modal after deletion
     })
     .catch(error => console.error('Delete error:', error));
   };
@@ -54,8 +41,6 @@ const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
             key={movie.id}
             className="movie-card"
             onClick={() => handleMovieClick(movie)}
-            onKeyUp={(event) => handleKeyUp(event, movie)}
-            onKeyDown={(event) => handleKeyDown(event, movie)}
             tabIndex={0}
             role="button"
           >
@@ -66,13 +51,8 @@ const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
       </div>
 
       {selectedMovie && (
-        <div
-          className="movie-modal"
-          onKeyUp={handleModalKeyUp}
-        >
-          <div
-            className="movie-modal-content"
-          >
+        <div className="movie-modal">
+          <div className="movie-modal-content">
             <h2>{selectedMovie.title}</h2>
             <p><strong>Year:</strong> {selectedMovie.year}</p>
             <p><strong>Runtime:</strong> {selectedMovie.runtime} minutes</p>

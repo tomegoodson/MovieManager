@@ -3,7 +3,7 @@ import './GenreFilter.css';
 
 const GenreFilter = ({ genres, onFilter }) => {
   const handleChange = (e) => {
-    console.log('Genre selected:', e.target.value); // Debugging line
+    console.log('Genre selected:', e.target.value); // debugging line
     onFilter(e.target.value);
   };
 

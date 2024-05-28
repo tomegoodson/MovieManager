@@ -9,27 +9,32 @@ import Favorites from './Favorites';
 import './App.css';
 
 const App = () => {
+  // state variables for managing filter, search query, movies list, and favorites list
   const [filter, setFilter] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [movies, setMovies] = useState([]);
   const [favorites, setFavorites] = useState([]);
 
+  // fetch the list of movies from the backend server on component mount
   useEffect(() => {
     fetch('http://localhost:3001/movies')
       .then(response => response.json())
       .then(data => setMovies(data));
   }, []);
 
+  // Add Movie
   const addMovie = (newMovie) => {
     setMovies([...movies, newMovie]);
   };
 
+  // Delete Movie
   const deleteMovie = (movieId) => {
     const updatedMovies = movies.filter(movie => movie.id !== movieId);
     setMovies(updatedMovies);
-    setFavorites(favorites.filter(id => id !== movieId)); // Remove from favorites if deleted
+    setFavorites(favorites.filter(id => id !== movieId)); // remove from favorites if deleted
   };
 
+  // Favorite Status, needs to be worked on
   const toggleFavorite = (movieId) => {
     setFavorites(prevFavorites =>
       prevFavorites.includes(movieId)
@@ -38,6 +43,7 @@ const App = () => {
     );
   };
 
+ 
   const genres = [
     "Comedy", "Fantasy", "Crime", "Drama", "Music", "Adventure",
     "History", "Thriller", "Animation", "Family", "Mystery",
