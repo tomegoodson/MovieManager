@@ -35,7 +35,8 @@ const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
     <div className="container">
       <div className="movie-grid">
         {filteredMovies.map(movie => (
-          <div
+          // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
+<div
             key={movie.id}
             className="movie-card"
             onClick={() => handleMovieClick(movie)}

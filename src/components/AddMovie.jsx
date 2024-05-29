@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AddMovie.css';
-
+//hello 
 const AddMovie = ({ onAdd }) => {
   const [title, setTitle] = useState('');
   const [year, setYear] = useState('');
