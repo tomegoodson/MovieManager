@@ -650,21 +650,6 @@
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkyNzY5MDA5MV5BMl5BanBnXkFtZTcwMjg4MzI3MQ@@._V1_SX300.jpg"
     },
     {
-      "id": "70",
-      "title": "Catch Me If You Can",
-      "year": "2002",
-      "runtime": "141",
-      "genres": [
-        "Biography",
-        "Crime",
-        "Drama"
-      ],
-      "director": "Steven Spielberg",
-      "actors": "Leonardo DiCaprio, Tom Hanks, Christopher Walken, Martin Sheen",
-      "plot": "The true story of Frank Abagnale Jr. who, before his 19th birthday, successfully conned millions of dollars' worth of checks as a Pan Am pilot, doctor, and legal prosecutor.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY5MzYzNjc5NV5BMl5BanBnXkFtZTYwNTUyNTc2._V1_SX300.jpg"
-    },
-    {
       "id": "71",
       "title": "American History X",
       "year": "1998",

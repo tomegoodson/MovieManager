@@ -29,7 +29,7 @@ const App = () => {
   const deleteMovie = (movieId) => {
     const updatedMovies = movies.filter(movie => movie.id !== movieId);
     setMovies(updatedMovies);
-    setFavorites(favorites.filter(id => id !== movieId)); // Remove from favorites if deleted
+    setFavorites(favorites.filter(id => id !== movieId)); 
   };
 
   const toggleFavorite = (movieId) => {

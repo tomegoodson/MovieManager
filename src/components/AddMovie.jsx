@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AddMovie.css';
-
+//hello 
 const AddMovie = ({ onAdd }) => {
   const [title, setTitle] = useState('');
   const [year, setYear] = useState('');
@@ -11,14 +11,14 @@ const AddMovie = ({ onAdd }) => {
   const [actors, setActors] = useState('');
   const [plot, setPlot] = useState('');
   const [posterUrl, setPosterUrl] = useState('');
-  const navigate = useNavigate(); //  navigate    
+  const navigate = useNavigate();     
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default submission
+    e.preventDefault(); 
 
     const newMovie = { title, year, runtime, genre, director, actors, plot, posterUrl };
 
-    // post request to add the new movie to the backend server
+    
     fetch('http://localhost:3001/movies', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -26,8 +26,8 @@ const AddMovie = ({ onAdd }) => {
     })
       .then(response => response.json())
       .then(data => {
-        onAdd(data); // onAdd function passed via props to update the parent component state
-        navigate('/'); // navigate back to the home page after submission
+        onAdd(data); 
+        navigate('/'); 
       });
   };
 

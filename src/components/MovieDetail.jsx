@@ -3,8 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import './MovieDetail.css';
 
 const MovieDetail = ({ deleteMovie, favorites, toggleFavorite }) => {
-  const { id } = useParams(); // get movie id from the URL parameters
-  const navigate = useNavigate(); // hook for  navigation
+  const { id } = useParams(); 
+  const navigate = useNavigate(); 
   const [movie, setMovie] = useState(null); 
 
   useEffect(() => {
@@ -13,13 +13,13 @@ const MovieDetail = ({ deleteMovie, favorites, toggleFavorite }) => {
       .then(data => setMovie(data));
   }, [id]);
 
-  // Deelete
+  
   const handleDelete = () => {
     fetch(`http://localhost:3001/movies/${id}`, {
       method: 'DELETE'
     })
       .then(() => {
-        deleteMovie(id); //  deleteMovie function passed as a prop
+        deleteMovie(id); 
         navigate('/'); 
       })
       .catch(error => console.error('Delete error:', error));
@@ -29,7 +29,7 @@ const MovieDetail = ({ deleteMovie, favorites, toggleFavorite }) => {
     toggleFavorite(movie.id);
   };
 
-  const isFavorited = favorites.includes(movie?.id); // movie is in the favorites list
+  const isFavorited = favorites.includes(movie?.id); 
 
   return (
     movie ? (
