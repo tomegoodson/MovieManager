@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './MovieList.css';
 
 const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
-  // State  track the selected movie
+  
   const [selectedMovie, setSelectedMovie] = useState(null);
 
   const filteredMovies = movies.filter(movie => {
@@ -14,18 +14,18 @@ const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
     setSelectedMovie(movie);
   };
 
-  // close the movie modal
+  
   const handleClose = () => {
     setSelectedMovie(null);
   };
 
-  //  movie deletion
+ 
   const handleDelete = () => {
     fetch(`http://localhost:3001/movies/${selectedMovie.id}`, {
       method: 'DELETE'
     })
     .then(() => {
-      deleteMovie(selectedMovie.id); // Call the deleteMovie prop to update parent state
+      deleteMovie(selectedMovie.id); 
       handleClose(); 
     })
     .catch(error => console.error('Delete error:', error));

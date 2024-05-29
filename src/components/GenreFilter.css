@@ -17,6 +17,6 @@
     background-color: #000; 
     color: white; 
     cursor: pointer;
-    z-index: 1; /*  the dropdown is above   */
+    z-index: 1; 
   }
   
