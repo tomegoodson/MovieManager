@@ -88,6 +88,7 @@
   "movies": [
     {
       "id": "2",
+      "favorite": false,
       "title": "The Cotton Club",
       "year": "1984",
       "runtime": "127",
@@ -102,51 +103,8 @@
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"
     },
     {
-      "id": "4",
-      "title": "Crocodile Dundee",
-      "year": "1986",
-      "runtime": "97",
-      "genres": [
-        "Adventure",
-        "Comedy"
-      ],
-      "director": "Peter Faiman",
-      "actors": "Paul Hogan, Linda Kozlowski, John Meillon, David Gulpilil",
-      "plot": "An American reporter goes to the Australian outback to meet an eccentric crocodile poacher and invites him to New York City.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0MTU1MTg4NF5BMl5BanBnXkFtZTgwMDgzNzYxMTE@._V1_SX300.jpg"
-    },
-    {
-      "id": "6",
-      "title": "Ratatouille",
-      "year": "2007",
-      "runtime": "111",
-      "genres": [
-        "Animation",
-        "Comedy",
-        "Family"
-      ],
-      "director": "Brad Bird, Jan Pinkava",
-      "actors": "Patton Oswalt, Ian Holm, Lou Romano, Brian Dennehy",
-      "plot": "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous restaurant.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_SX300.jpg"
-    },
-    {
-      "id": "10",
-      "title": "Stardust",
-      "year": "2007",
-      "runtime": "127",
-      "genres": [
-        "Adventure",
-        "Family",
-        "Fantasy"
-      ],
-      "director": "Matthew Vaughn",
-      "actors": "Ian McKellen, Bimbo Hart, Alastair MacIntosh, David Kelly",
-      "plot": "In a countryside town bordering on a magical land, a young man makes a promise to his beloved that he'll retrieve a fallen star by venturing into the magical realm.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjkyMTE1OTYwNF5BMl5BanBnXkFtZTcwMDIxODYzMw@@._V1_SX300.jpg"
-    },
-    {
       "id": "11",
+      "favorite": false,
       "title": "Apocalypto",
       "year": "2006",
       "runtime": "139",
@@ -162,6 +120,7 @@
     },
     {
       "id": "13",
+      "favorite": false,
       "title": "No Country for Old Men",
       "year": "2007",
       "runtime": "122",
@@ -177,6 +136,7 @@
     },
     {
       "id": "18",
+      "favorite": false,
       "title": "The Beach",
       "year": "2000",
       "runtime": "119",
@@ -192,6 +152,7 @@
     },
     {
       "id": "19",
+      "favorite": false,
       "title": "Scarface",
       "year": "1983",
       "runtime": "170",
@@ -206,6 +167,7 @@
     },
     {
       "id": "20",
+      "favorite": false,
       "title": "Sid and Nancy",
       "year": "1986",
       "runtime": "112",
@@ -221,6 +183,7 @@
     },
     {
       "id": "21",
+      "favorite": false,
       "title": "Black Swan",
       "year": "2010",
       "runtime": "108",
@@ -235,6 +198,7 @@
     },
     {
       "id": "22",
+      "favorite": false,
       "title": "Inception",
       "year": "2010",
       "runtime": "148",
@@ -250,6 +214,7 @@
     },
     {
       "id": "24",
+      "favorite": false,
       "title": "Chasing Amy",
       "year": "1997",
       "runtime": "113",
@@ -265,6 +230,7 @@
     },
     {
       "id": "26",
+      "favorite": false,
       "title": "The Silence of the Lambs",
       "year": "1991",
       "runtime": "118",
@@ -280,6 +246,7 @@
     },
     {
       "id": "29",
+      "favorite": false,
       "title": "Midnight Express",
       "year": "1978",
       "runtime": "121",
@@ -295,6 +262,7 @@
     },
     {
       "id": "30",
+      "favorite": false,
       "title": "Pulp Fiction",
       "year": "1994",
       "runtime": "154",
@@ -309,6 +277,7 @@
     },
     {
       "id": "31",
+      "favorite": false,
       "title": "Lock, Stock and Two Smoking Barrels",
       "year": "1998",
       "runtime": "107",
@@ -323,6 +292,7 @@
     },
     {
       "id": "33",
+      "favorite": false,
       "title": "Rear Window",
       "year": "1954",
       "runtime": "112",
@@ -337,6 +307,7 @@
     },
     {
       "id": "35",
+      "favorite": false,
       "title": "Shutter Island",
       "year": "2010",
       "runtime": "138",
@@ -351,6 +322,7 @@
     },
     {
       "id": "36",
+      "favorite": false,
       "title": "Reservoir Dogs",
       "year": "1992",
       "runtime": "99",
@@ -366,6 +338,7 @@
     },
     {
       "id": "41",
+      "favorite": false,
       "title": "Moneyball",
       "year": "2011",
       "runtime": "133",
@@ -381,6 +354,7 @@
     },
     {
       "id": "42",
+      "favorite": false,
       "title": "The Hangover",
       "year": "2009",
       "runtime": "100",
@@ -394,6 +368,7 @@
     },
     {
       "id": "43",
+      "favorite": false,
       "title": "The Great Beauty",
       "year": "2013",
       "runtime": "141",
@@ -407,6 +382,7 @@
     },
     {
       "id": "45",
+      "favorite": false,
       "title": "Mary and Max",
       "year": "2009",
       "runtime": "92",
@@ -422,6 +398,7 @@
     },
     {
       "id": "46",
+      "favorite": false,
       "title": "Flight",
       "year": "2012",
       "runtime": "138",
@@ -436,6 +413,7 @@
     },
     {
       "id": "47",
+      "favorite": false,
       "title": "One Flew Over the Cuckoo's Nest",
       "year": "1975",
       "runtime": "133",
@@ -449,6 +427,7 @@
     },
     {
       "id": "48",
+      "favorite": false,
       "title": "Requiem for a Dream",
       "year": "2000",
       "runtime": "102",
@@ -462,6 +441,7 @@
     },
     {
       "id": "49",
+      "favorite": false,
       "title": "The Truman Show",
       "year": "1998",
       "runtime": "103",
@@ -477,6 +457,7 @@
     },
     {
       "id": "50",
+      "favorite": false,
       "title": "The Artist",
       "year": "2011",
       "runtime": "100",
@@ -492,6 +473,7 @@
     },
     {
       "id": "52",
+      "favorite": false,
       "title": "The Hobbit: The Desolation of Smaug",
       "year": "2013",
       "runtime": "161",
@@ -506,6 +488,7 @@
     },
     {
       "id": "53",
+      "favorite": false,
       "title": "Vicky Cristina Barcelona",
       "year": "2008",
       "runtime": "96",
@@ -520,6 +503,7 @@
     },
     {
       "id": "55",
+      "favorite": false,
       "title": "Lost in Translation",
       "year": "2003",
       "runtime": "101",
@@ -533,6 +517,7 @@
     },
     {
       "id": "56",
+      "favorite": false,
       "title": "Match Point",
       "year": "2005",
       "runtime": "119",
@@ -548,6 +533,7 @@
     },
     {
       "id": "59",
+      "favorite": false,
       "title": "Madagascar: Escape 2 Africa",
       "year": "2008",
       "runtime": "89",
@@ -563,6 +549,7 @@
     },
     {
       "id": "61",
+      "favorite": false,
       "title": "Downfall",
       "year": "2004",
       "runtime": "156",
@@ -578,6 +565,7 @@
     },
     {
       "id": "62",
+      "favorite": false,
       "title": "Madagascar",
       "year": "2005",
       "runtime": "86",
@@ -593,6 +581,7 @@
     },
     {
       "id": "63",
+      "favorite": false,
       "title": "Madagascar 3: Europe's Most Wanted",
       "year": "2012",
       "runtime": "93",
@@ -608,6 +597,7 @@
     },
     {
       "id": "64",
+      "favorite": false,
       "title": "God Bless America",
       "year": "2011",
       "runtime": "105",
@@ -622,6 +612,7 @@
     },
     {
       "id": "65",
+      "favorite": false,
       "title": "The Social Network",
       "year": "2010",
       "runtime": "120",
@@ -636,6 +627,7 @@
     },
     {
       "id": "69",
+      "favorite": false,
       "title": "American Gangster",
       "year": "2007",
       "runtime": "157",
@@ -650,21 +642,8 @@
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkyNzY5MDA5MV5BMl5BanBnXkFtZTcwMjg4MzI3MQ@@._V1_SX300.jpg"
     },
     {
-      "id": "71",
-      "title": "American History X",
-      "year": "1998",
-      "runtime": "119",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "director": "Tony Kaye",
-      "actors": "Edward Norton, Edward Furlong, Beverly D'Angelo, Jennifer Lien",
-      "plot": "A former neo-nazi skinhead tries to prevent his younger brother from going down the same wrong path that he did.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BZjA0MTM4MTQtNzY5MC00NzY3LWI1ZTgtYzcxMjkyMzU4MDZiXkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg"
-    },
-    {
       "id": "73",
+      "favorite": false,
       "title": "Pirates of the Caribbean: At World's End",
       "year": "2007",
       "runtime": "169",
@@ -680,6 +659,7 @@
     },
     {
       "id": "75",
+      "favorite": false,
       "title": "Crash",
       "year": "2004",
       "runtime": "112",
@@ -695,6 +675,7 @@
     },
     {
       "id": "76",
+      "favorite": false,
       "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
       "year": "2003",
       "runtime": "143",
@@ -710,6 +691,7 @@
     },
     {
       "id": "78",
+      "favorite": false,
       "title": "Oldboy",
       "year": "2003",
       "runtime": "120",
@@ -725,6 +707,7 @@
     },
     {
       "id": "79",
+      "favorite": false,
       "title": "Chocolat",
       "year": "2000",
       "runtime": "121",
@@ -739,6 +722,7 @@
     },
     {
       "id": "80",
+      "favorite": false,
       "title": "Casino Royale",
       "year": "2006",
       "runtime": "144",
@@ -754,6 +738,7 @@
     },
     {
       "id": "81",
+      "favorite": false,
       "title": "WALL·E",
       "year": "2008",
       "runtime": "98",
@@ -769,6 +754,7 @@
     },
     {
       "id": "82",
+      "favorite": false,
       "title": "The Wolf of Wall Street",
       "year": "2013",
       "runtime": "180",
@@ -784,6 +770,7 @@
     },
     {
       "id": "83",
+      "favorite": false,
       "title": "Hellboy II: The Golden Army",
       "year": "2008",
       "runtime": "120",
@@ -799,6 +786,7 @@
     },
     {
       "id": "85",
+      "favorite": false,
       "title": "I-See-You.Com",
       "year": "2006",
       "runtime": "92",
@@ -812,6 +800,7 @@
     },
     {
       "id": "86",
+      "favorite": false,
       "title": "The Grand Budapest Hotel",
       "year": "2014",
       "runtime": "99",
@@ -827,6 +816,7 @@
     },
     {
       "id": "89",
+      "favorite": false,
       "title": "Oblivion",
       "year": "2013",
       "runtime": "124",
@@ -842,6 +832,7 @@
     },
     {
       "id": "90",
+      "favorite": false,
       "title": "V for Vendetta",
       "year": "2005",
       "runtime": "132",
@@ -857,6 +848,7 @@
     },
     {
       "id": "91",
+      "favorite": false,
       "title": "Gattaca",
       "year": "1997",
       "runtime": "106",
@@ -872,6 +864,7 @@
     },
     {
       "id": "92",
+      "favorite": false,
       "title": "Silver Linings Playbook",
       "year": "2012",
       "runtime": "122",
@@ -887,6 +880,7 @@
     },
     {
       "id": "93",
+      "favorite": false,
       "title": "Alice in Wonderland",
       "year": "2010",
       "runtime": "108",
@@ -902,6 +896,7 @@
     },
     {
       "id": "95",
+      "favorite": false,
       "title": "Pacific Rim",
       "year": "2013",
       "runtime": "131",
@@ -917,6 +912,7 @@
     },
     {
       "id": "98",
+      "favorite": false,
       "title": "Cloud Atlas",
       "year": "2012",
       "runtime": "172",
@@ -931,6 +927,7 @@
     },
     {
       "id": "99",
+      "favorite": false,
       "title": "The Impossible",
       "year": "2012",
       "runtime": "114",
@@ -945,6 +942,7 @@
     },
     {
       "id": "100",
+      "favorite": false,
       "title": "All Quiet on the Western Front",
       "year": "1930",
       "runtime": "136",
@@ -959,6 +957,7 @@
     },
     {
       "id": "102",
+      "favorite": false,
       "title": "Dallas Buyers Club",
       "year": "2013",
       "runtime": "117",
@@ -973,6 +972,7 @@
     },
     {
       "id": "104",
+      "favorite": false,
       "title": "Before Sunrise",
       "year": "1995",
       "runtime": "105",
@@ -987,6 +987,7 @@
     },
     {
       "id": "105",
+      "favorite": false,
       "title": "The Rum Diary",
       "year": "2011",
       "runtime": "120",
@@ -1001,6 +1002,7 @@
     },
     {
       "id": "107",
+      "favorite": false,
       "title": "Chinatown",
       "year": "1974",
       "runtime": "130",
@@ -1016,6 +1018,7 @@
     },
     {
       "id": "108",
+      "favorite": false,
       "title": "Calvary",
       "year": "2014",
       "runtime": "102",
@@ -1030,6 +1033,7 @@
     },
     {
       "id": "110",
+      "favorite": false,
       "title": "Spirited Away",
       "year": "2001",
       "runtime": "125",
@@ -1045,6 +1049,7 @@
     },
     {
       "id": "111",
+      "favorite": false,
       "title": "Indochine",
       "year": "1992",
       "runtime": "159",
@@ -1059,6 +1064,7 @@
     },
     {
       "id": "112",
+      "favorite": false,
       "title": "Birdman or (The Unexpected Virtue of Ignorance)",
       "year": "2014",
       "runtime": "119",
@@ -1074,6 +1080,7 @@
     },
     {
       "id": "113",
+      "favorite": false,
       "title": "Boyhood",
       "year": "2014",
       "runtime": "165",
@@ -1087,6 +1094,7 @@
     },
     {
       "id": "114",
+      "favorite": false,
       "title": "12 Angry Men",
       "year": "1957",
       "runtime": "96",
@@ -1101,6 +1109,7 @@
     },
     {
       "id": "115",
+      "favorite": false,
       "title": "The Imitation Game",
       "year": "2014",
       "runtime": "114",
@@ -1116,6 +1125,7 @@
     },
     {
       "id": "116",
+      "favorite": false,
       "title": "Interstellar",
       "year": "2014",
       "runtime": "169",
@@ -1131,6 +1141,7 @@
     },
     {
       "id": "117",
+      "favorite": false,
       "title": "Big Nothing",
       "year": "2006",
       "runtime": "86",
@@ -1146,6 +1157,7 @@
     },
     {
       "id": "118",
+      "favorite": false,
       "title": "Das Boot",
       "year": "1981",
       "runtime": "149",
@@ -1161,6 +1173,7 @@
     },
     {
       "id": "119",
+      "favorite": false,
       "title": "Shrek 2",
       "year": "2004",
       "runtime": "93",
@@ -1176,6 +1189,7 @@
     },
     {
       "id": "120",
+      "favorite": false,
       "title": "Sin City",
       "year": "2005",
       "runtime": "124",
@@ -1190,6 +1204,7 @@
     },
     {
       "id": "121",
+      "favorite": false,
       "title": "Nebraska",
       "year": "2013",
       "runtime": "115",
@@ -1205,6 +1220,7 @@
     },
     {
       "id": "122",
+      "favorite": false,
       "title": "Shrek",
       "year": "2001",
       "runtime": "90",
@@ -1220,6 +1236,7 @@
     },
     {
       "id": "123",
+      "favorite": false,
       "title": "Mr. & Mrs. Smith",
       "year": "2005",
       "runtime": "120",
@@ -1235,6 +1252,7 @@
     },
     {
       "id": "124",
+      "favorite": false,
       "title": "Original Sin",
       "year": "2001",
       "runtime": "116",
@@ -1250,6 +1268,7 @@
     },
     {
       "id": "127",
+      "favorite": false,
       "title": "Despicable Me",
       "year": "2010",
       "runtime": "95",
@@ -1265,6 +1284,7 @@
     },
     {
       "id": "129",
+      "favorite": false,
       "title": "The Hobbit: An Unexpected Journey",
       "year": "2012",
       "runtime": "169",
@@ -1279,6 +1299,7 @@
     },
     {
       "id": "130",
+      "favorite": false,
       "title": "The Great Gatsby",
       "year": "2013",
       "runtime": "143",
@@ -1293,6 +1314,7 @@
     },
     {
       "id": "131",
+      "favorite": false,
       "title": "Ice Age",
       "year": "2002",
       "runtime": "81",
@@ -1308,6 +1330,7 @@
     },
     {
       "id": "133",
+      "favorite": false,
       "title": "The Lord of the Rings: The Two Towers",
       "year": "2002",
       "runtime": "179",
@@ -1323,6 +1346,7 @@
     },
     {
       "id": "134",
+      "favorite": false,
       "title": "Ex Machina",
       "year": "2015",
       "runtime": "108",
@@ -1338,6 +1362,7 @@
     },
     {
       "id": "135",
+      "favorite": false,
       "title": "The Theory of Everything",
       "year": "2014",
       "runtime": "123",
@@ -1353,6 +1378,7 @@
     },
     {
       "id": "141",
+      "favorite": false,
       "title": "Hotel Rwanda",
       "year": "2004",
       "runtime": "121",
@@ -1368,6 +1394,7 @@
     },
     {
       "id": "142",
+      "favorite": false,
       "title": "The Martian",
       "year": "2015",
       "runtime": "144",
@@ -1383,6 +1410,7 @@
     },
     {
       "id": "144",
+      "favorite": false,
       "title": "The Hateful Eight",
       "year": "2015",
       "runtime": "187",

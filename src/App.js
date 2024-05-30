@@ -13,14 +13,13 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [movies, setMovies] = useState([]);
   const [favorites, setFavorites] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
   useEffect(() => {
     fetch('http://localhost:3001/movies')
       .then(response => response.json())
       .then(data => setMovies(data));
   }, []);
-
-
 
   const addMovie = (newMovie) => {
     setMovies([...movies, newMovie]);
@@ -47,14 +46,30 @@ const App = () => {
     "War", "Musical", "Sport"
   ];
 
+  const handlePatch= (id, currentStatus) => {
+    fetch(`http://localhost:3001/movies/${id}`, {
+      method: 'PATCH',
+      headers:{
+        'Content-Type': "application/JSON"
+      },
+      body: JSON.stringify({favorite: !currentStatus})
+    })
+    .then(response => response.json()) 
+    .then(updatedMovie => {
+      setMovies(movies.map(movie =>
+        movie.id === id ? { ...movie, favorite: updatedMovie.favorite } : movie
+      ));
+    })
+    .catch(error => console.error('Error updating data:', error ));
+  }
+
   return (
     <Router>
       <div className="container">
         <Navbar setSearchQuery={setSearchQuery} />
         <GenreFilter genres={genres} onFilter={setFilter} />
         <Routes>
-          <Route exact path="/" element={<MovieList movies={movies} filter={filter} searchQuery={searchQuery} deleteMovie={deleteMovie} />} />
-          <Route path="/movies/:id" element={<MovieDetail onDelete={deleteMovie} toggleFavorite={toggleFavorite} favorites={favorites} />} />
+          <Route path="/" element={<MovieList selectedMovie={selectedMovie} setSelectedMovie={setSelectedMovie} favoriteUpdate={handlePatch} toggleFavorite={toggleFavorite} movies={movies} filter={filter} searchQuery={searchQuery} deleteMovie={deleteMovie} />} />
           <Route path="/add-movie" element={<AddMovie onAdd={addMovie} />} />
           <Route path="/favorites" element={<Favorites favorites={favorites} movies={movies} />} />
         </Routes>
