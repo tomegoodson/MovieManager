@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './MovieList.css';
 
-const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
+const MovieList = ({ movies, filter, searchQuery, deleteMovie, toggleFavorite, setSelectedMovie, selectedMovie }) => {
   
-  const [selectedMovie, setSelectedMovie] = useState(null);
 
   const filteredMovies = movies.filter(movie => {
     return (!filter || movie.genres.includes(filter)) &&
@@ -14,12 +13,10 @@ const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
     setSelectedMovie(movie);
   };
 
-  
   const handleClose = () => {
     setSelectedMovie(null);
   };
 
- 
   const handleDelete = () => {
     fetch(`http://localhost:3001/movies/${selectedMovie.id}`, {
       method: 'DELETE'
@@ -30,13 +27,28 @@ const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
     })
     .catch(error => console.error('Delete error:', error));
   };
+  
+  const handleFavoriteClick = (movie) => {
+    fetch(`http://localhost:3001/movies/${movie.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ favorite: !movie.favorite })
+    })
+    .then(response => response.json())
+    .then(updatedMovie => {
+      toggleFavorite(movie.id, movie.favorite);
+      setSelectedMovie({ ...movie, favorite: updatedMovie.favorite }); // Update the selected movie's favorite status
+    })
+    .catch(error => console.error('Error updating favorite status:', error));
+  };
 
   return (
     <div className="container">
       <div className="movie-grid">
         {filteredMovies.map(movie => (
-          // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
-<div
+          <div
             key={movie.id}
             className="movie-card"
             onClick={() => handleMovieClick(movie)}
@@ -52,7 +64,12 @@ const MovieList = ({ movies, filter, searchQuery, deleteMovie }) => {
       {selectedMovie && (
         <div className="movie-modal">
           <div className="movie-modal-content">
-            <h2>{selectedMovie.title}</h2>
+            <h2>
+              {selectedMovie.title}
+              <button onClick={() => handleFavoriteClick(selectedMovie)}>
+                {selectedMovie.favorite ? 'Unfavorite' : 'Favorite'}
+              </button>
+            </h2>
             <p><strong>Year:</strong> {selectedMovie.year}</p>
             <p><strong>Runtime:</strong> {selectedMovie.runtime} minutes</p>
             <p><strong>Director:</strong> {selectedMovie.director}</p>
